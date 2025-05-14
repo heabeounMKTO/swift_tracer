@@ -11,15 +11,15 @@ struct Vec3 {
         return "Vec3(\(x), \(y), \(z))"
     }
     static func +(a: Vec3, b: Vec3) -> Vec3 {
-        Vec3(a.x + b.x, a.y + b.y, b.z + b.z)
+        Vec3(a.x + b.x, a.y + b.y, a.z + b.z)
     }
 
     static func -(a: Vec3, b: Vec3) -> Vec3 {
-        Vec3( a.x - b.x, a.y - b.y, b.z - b.z)
+        Vec3( a.x - b.x, a.y - b.y, a.z - b.z)
     }
 
     static func *(a: Vec3, b: Vec3) -> Vec3 {
-        Vec3(a.x * b.x, a.y * b.y, b.z * b.z)
+        Vec3(a.x * b.x, a.y * b.y, a.z * b.z)
     }
     
     static func * (lhs: Vec3, rhs: Double) -> Vec3 {
@@ -29,7 +29,7 @@ struct Vec3 {
     static func * (lhs: Double, rhs: Vec3) -> Vec3 {
         return rhs * lhs
     }
-
+    
     static func /(v: Vec3, t: Double) -> Vec3 {
         (1 / t) * v
     }
