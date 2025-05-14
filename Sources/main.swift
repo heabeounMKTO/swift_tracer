@@ -1,7 +1,10 @@
 import Foundation
 
 let camera: Camera = Camera(
-  image_width: 256, image_height: 256, camera_center: Vec3(0, 0, 0), viewport_height: 2.0,
+  image_width: 256,
+  image_height: 256, 
+  camera_center: Vec3(0, 0, 0), 
+    viewport_height: 2.0,
   focal_length: 1.0)
 
 print("P3\n\(camera.image_width) \(camera.image_height)\n255")

@@ -10,11 +10,12 @@ struct Sphere: Hittable {
     let b = -2.0 * Vec3.dot(v1: ray.direction, v2: oc)
     let c = Vec3.dot(v1: oc, v2: oc) - self.radius * self.radius
     let discriminant = b * b - 4 * a * c
-        if discriminant >= 0 {
-            return (-b - sqrt(discriminant) / (2.0*a)) 
+        if discriminant < 0 {
+            return -1.0 
         }
         else {
-            return -1.0 
+
+            return (-b - sqrt(discriminant) / (2.0*a)) 
         }
   }
 }
