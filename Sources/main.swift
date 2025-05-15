@@ -9,6 +9,8 @@ let camera: Camera = Camera(
 
 print("P3\n\(camera.image_width) \(camera.image_height)\n255")
 
+let world: HitableList;
+
 let DUMMY_SPHERE = Sphere(center: Vec3(0.0, 0.0, -1.0), radius: 0.5)
 
 for j in 0..<camera.image_height {

@@ -7,8 +7,14 @@ struct Color {
     self.b = Int(255.999 * clamp(pixel_color.z, min: 0.0, max: 1.0))
   }
 
-  static func ray_color(r: Ray, object: Sphere) -> Color {
+  static func ray_color(r: Ray, world: HitableList) -> Color {
     let t = object.hit(ray: r)
+    if let hit_record = world.hit(r, 0.01, INFINITY) {
+            let _col = 0.5 * ( hit_record.normal + Vec3(1,1,1))
+            return Color(_col)
+        }
+
+
     if t > 0.0 {
       var N = r.at(t) - Vec3(0, 0, -1)
       N = (N / N.length()) + Vec3(1, 1, 1)
