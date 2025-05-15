@@ -9,10 +9,10 @@ struct Color {
 
   static func ray_color(r: Ray, object: Sphere) -> Color {
     let t = object.hit(ray: r)
-    if (t > 0.0) {
-            var N  = r.at(t) - Vec3(0,0,-1)  
-            N = (N / N.length()) + Vec3(1,1,1) 
-            return  Color(from: 0.5*N)
+    if t > 0.0 {
+      var N = r.at(t) - Vec3(0, 0, -1)
+      N = (N / N.length()) + Vec3(1, 1, 1)
+      return Color(from: 0.5 * N)
     }
 
     let unit_dir: Vec3 = r.direction / r.direction.length()

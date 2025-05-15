@@ -8,16 +8,16 @@ struct Vec3 {
     self.z = z
   }
   init(from a: Int) {
-        self.x = Double(a)
-        self.y = Double(a) 
-        self.z = Double(a)
-    }
+    self.x = Double(a)
+    self.y = Double(a)
+    self.z = Double(a)
+  }
 
   init(from a: Double) {
-        self.x = Double(a)
-        self.y = Double(a) 
-        self.z = Double(a)
-    }
+    self.x = Double(a)
+    self.y = Double(a)
+    self.z = Double(a)
+  }
   var description: String {
     return "Vec3(\(x), \(y), \(z))"
   }
@@ -53,8 +53,7 @@ struct Vec3 {
     x * x + y * y + z * z
   }
 
-
-  static func dot( v1: Vec3, v2: Vec3 ) -> Double {
+  static func dot(v1: Vec3, v2: Vec3) -> Double {
     return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z
   }
 
